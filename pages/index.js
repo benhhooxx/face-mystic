@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
 export default function Home() {
   const [gender, setGender] = useState("");
@@ -169,26 +169,16 @@ export default function Home() {
             </>
           )}
         </section>
-      </div>
 
-      <style jsx global>{`
-        .backdrop-blur-md {
-          backdrop-filter: saturate(180%) blur(20px);
-        }
-        .animate-fadein {
-          animation: fadein 0.8s ease forwards;
-        }
-        @keyframes fadein {
-          from {
-            opacity: 0;
-            transform: translateY(30px);
-          }
-          to {
-            opacity: 1;
-            transform: translateY(0);
-          }
-        }
-      `}</style>
+        {/* TODO: add image below with pretty tailwind with responsive */}
+        <div className="mt-6 flex justify-center">
+          <img
+            src="/assets/traditional_face_table.jpeg"
+            alt="傳統面相百歲流年表"
+            className="max-w-full h-auto rounded-xl shadow-lg border border-gray-200"
+          />
+        </div>
+      </div>
     </main>
   );
 }
